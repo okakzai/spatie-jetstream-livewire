@@ -1,0 +1,62 @@
+TUTORIAL
+- https://laravel-news.com/jetstream-spatie-permission
+- hhttps://www.youtube.com/watch?v=gny17Yln1Nw
+
+TEKNOLOGI
+- PHP 8.2.12
+- Laravel 10.48.28
+- MariaDB 10.4.32 
+- Node.js 21.7.3
+- Jetstream 4.3.1 (Livewire 3.5.20 + Tailwind CSS 3.1.0)
+- Spatie 6.15.0
+
+DEVELOPMENT
+1. Terminal: composer create-project --prefer-dist laravel/laravel spatie-jetstream-livewire "10.*"
+2. Terminal: cd spatie-jetstream-livewire
+3. PHPMyAdmin: Buat tabel 'spatie-jetstream-livewire'
+4. VSCode: Edit file '.env' terkait koneksi database
+5. Terminal: composer require laravel/jetstream
+6. Terminal: php artisan jetstream:install livewire
+7. Terminal: php artisan migrate
+8. Terminal: php artisan make:model Task -mcrR
+9. VSCode: Edit file 'yyyy_mm_dd_******_create_tasks_table.php' di folder 'database/migrations'
+10. Terminal: php artisan migrate
+11. VSCode: Edit file 'Task.php' di folder 'app/Models'
+12. VSCode: Edit file 'TaskController.php' di folder 'app/Http/Controllers'
+13. VSCode: Edit file 'web.php' di folder 'routes'
+14. VSCode: Edit file 'navigation-menu.blade' di folder 'resources/views'
+15. VSCode: Buat folder 'tasks' di folder 'resources/views'
+16. VSCode: Buat file 'index.blade.php' di folder 'resources/views/tasks'
+17. VSCode: Buat file 'link.blade.php' di folder 'resources/views/components'
+18. VSCode: Buat file 'create.blade.php' di folder 'resources/views/tasks'
+19. VSCode: Edit file 'StoreTaskRequest.php' di folder 'app/Http/Requests'
+20. VSCode: Buat file 'edit.blade.php' di folder 'resources/views/tasks'
+21. VSCode: Edit file 'UpdateTaskRequest.php' di folder 'app/Http/Requests'
+22. Terminal: npm run build
+23. Terminal: php artisan serve
+24. Terminal: composer require spatie/laravel-permission
+25. Terminal: php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+26. Terminal: php artisan migrate
+27. VSCode: Edit file 'Users.php' di folder 'app/Models'
+28. Terminal: php artisan make:seeder RolePermissionSeeder
+29. VSCode: Edit file 'RolePermissionSeeder.php' di folder 'database/seeders'
+30. Terminal: php artisan make:seeder AdminSeeder
+31. VSCode: Edit file 'AdminSeeder.php' di folder 'database/seeders'
+32. VSCode: Edit file 'DatabaseSeeder.php' di folder 'database/seeders'
+33. Terminal: php artisan db:seed
+34. VSCode: Edit file 'Handler.php' di folder 'app/Exceptions'
+35. VSCode: Buat folder 'errors' di folder 'resources/views'
+36. VSCode: Buat file 'index.blade.php' di folder 'resources/views/errors'
+37. VSCode: Edit file 'Kernel.php' di folder 'app/Http
+38. VSCode: Edit file 'CreateNewUser.php' di folder 'app/Actions/Fortify''
+39. Terminal: npm run build
+40. Terminal: php artisan serve
+41. Terminal: git init
+42. Terminal: git add .
+43. Terminal: git commit -m "Pertamaz"
+44. Terminal: git branch -M main
+45. Terminal: git remote add origin https://github.com/okakzai/spatie-jetstream-livewire.git
+46. Terminal: git pull origin main --rebase
+47. Terminal: git push -u origin main
+
+
